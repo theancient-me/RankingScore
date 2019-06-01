@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(this.cookie.get("token") != null){
+    if(this.cookie.get("token").length != 0){
       this.router.navigate(['admin-wip/manage']);
     }
   }

@@ -8,10 +8,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">รายชื่อวิป<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">รายชื่อวิป</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">เพิ่มคะแนน</a>
+        <a class="nav-link" (click)="logout()" href="#">ออกจากระบบ</a>
       </li>
     </ul>
   </div>
@@ -19,35 +19,78 @@
 
 <div class="container">
 
+  <div class="main-admin">
+
+<br>
   <table class="table">
     <thead class="thead-dark">
       <tr>
         <th scope="col">WIP-ID</th>
+        <th scope="col">LOGO</th>
         <th scope="col">WIP Name</th>
         <th scope="col">Score</th>
+        <th>คะแนน</th>
       </tr>
     </thead>
     <tbody>
-      
-      <div *ngFor="let list of WIPList; let i = index">
-          <tr>
-              <th>{{ list._id}}</th>
-              <td>{{ list.name}}</td>
-              <td>{{ list.score }}</td>
-            </tr>
 
-      </div>
-    
+      <tr *ngFor="let list of listWIP">
+        <td>{{ list._id}}</td>
+        <td><img src="{{ list.wipIcon }}" width="55px"></td>
+        <td>{{ list.name}}</td>
+        <td>{{ list.score }}</td>
+        <td>
+            <div class="row">
+                <div class="col-md-8">
+                  <input type="text"   #idwip value="{{ list._id }}" hidden>
+                  <input type="text" class="form-control" #addnewscore>
+                  <input type="text" value="{{ list.score }}" hidden #oldscore>
+                </div>
+                <div class="col-md-4">
+                    <button type="button" (click)="addnewScore(idwip.value,addnewscore.value,oldscore.value)" class="btn btn-info btn-xs">เพิ่ม</button>
+                    <button type="button" (click)="removeScore(idwip.value,addnewscore.value,oldscore.value)" class="btn btn-danger btn-xs">ลบ</button>
+                </div>
+              </div>
+        </td>
+ 
+      </tr>
+
     </tbody>
   </table>
 </div>
 
-<footer class="footer mt-auto py-3">
-    <div class="container">
-      <span class="text-muted">Place sticky footer content here.</span>
+<div class="card">
+    <div class="card-body">
+     
+      <div class="row">
+          <div class="col-md-3">
+            <input class="form-control" type="text" placeholder="WIP-ID" #wipid>
+          </div>
+          <div class="col-md-3">
+              <input class="form-control" type="text" placeholder="WIP Name" #wipname>
+          </div>
+          <div class="col-md-3">
+              <input class="form-control" type="text" placeholder="WIP logo" #wiplogo>
+          </div>
+          <div class="col-md-3">
+              <input class="form-control" type="text" placeholder="Score" #wip_score>
+          </div>
+      </div>
+      <br>
+      <div class="row" >
+        <div class="col-md-12">
+          <div align="center">
+              <button type="button" (click)="addWIP(wipid.value,wipname.value,wiplogo.value,wip_score.value)" class="btn btn-success">ADD-WIP</button>
+          </div>
+      
+        </div>
+       
+      </div>
+
+
     </div>
-  </footer>
+  </div>
 
 
 
-
+</div>
