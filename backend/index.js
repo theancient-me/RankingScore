@@ -6,7 +6,7 @@ var MongoClient = require("mongodb").MongoClient;
 var cors = require("cors");
 var CONFIG = require('./config/config.json');
 
-MongoClient.connect("mongodb://localhost:27017", (error, client) => {
+MongoClient.connect("mongodb://103.86.50.83:27017", (error, client) => {
   if (error) throw error;
   var db = client.db("WIPCAMP11");
   var keyToken = CONFIG.appKEY;
