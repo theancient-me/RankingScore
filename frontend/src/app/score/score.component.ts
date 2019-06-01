@@ -18,11 +18,12 @@ export class ScoreComponent implements OnInit {
 
 
   ngOnInit() {
-    this.updateSubscription = interval(3000).subscribe(
-      (val) => {
-        this.updateStats();
-      }
-    );
+    // this.updateSubscription = interval(3000).subscribe(
+    //   (val) => {
+    //     this.updateStats();
+    //   }
+    // );
+    this.updateStats();
 
 
   }
