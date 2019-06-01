@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
