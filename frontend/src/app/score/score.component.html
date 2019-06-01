@@ -17,74 +17,23 @@
 
         </div>
 
-      <li class="item">
+    
+      <li class="item" *ngFor="let list of listWIP">
         <div class="avatar"></div>
         <div class="text">
           <h1>
-           รสมัจฉะ
+           {{ list.name }}
           </h1>
-          <p>
-            มัจฉะหวานฉ่ำ
-          </p>
         </div>
-        <div class="movement">
+        <!-- <div class="movement">
           <span>7</span>
-        </div>
+        </div> -->
         <div class="rank">
-          <span>3</span>
+          <span>{{ list.score}}</span>
         </div>
       </li>
-      <li class="item">
-        <div class="avatar"></div>
-        <div class="text">
-          <h1>
-            This is a title!
-          </h1>
-          <p>
-            And a few words too.
-          </p>
-        </div>
-        <div class="movement">
-          <span>6</span>
-        </div>
-        <div class="rank">
-          <span>9</span>
-        </div>
-      </li>
-      <li class="item">
-        <div class="avatar"></div>
-        <div class="text">
-          <h1>
-            This is a title!
-          </h1>
-          <p>
-            And a few words too.
-          </p>
-        </div>
-        <div class="movement">
-          <span>9</span>
-        </div>
-        <div class="rank">
-          <span>10</span>
-        </div>
-      </li>
-      <li class="item">
-        <div class="avatar"></div>
-        <div class="text">
-          <h1>
-            This is a title!
-          </h1>
-          <p>
-            And a few words too.
-          </p>
-        </div>
-        <div class="movement">
-          <span>3</span>
-        </div>
-        <div class="rank">
-          <span>11</span>
-        </div>
-      </li>
+    
+
 
 
     </div>
