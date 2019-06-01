@@ -51,7 +51,7 @@ addnewScore(idwip:string,newscore: string,oldscore:string){
   const headers = new HttpHeaders()
             .set("token", this.cookie.get('token'));
   const payload = new HttpParams().set('wip_id', idwip).set('wip_score',score);
-  this.http.post("http://localhost:3001/addScore", payload,{headers}).subscribe(
+  this.http.post("http://103.86.50.83:3001/addScore", payload,{headers}).subscribe(
     (val) => {
       // 
     },
@@ -69,7 +69,7 @@ removeScore(idwip:string,newscore: string,oldscore:string){
   const headers = new HttpHeaders()
             .set("token", this.cookie.get('token'));
   const payload = new HttpParams().set('wip_id', idwip).set('wip_score',score);
-  this.http.post("http://localhost:3001/addScore", payload,{headers}).subscribe(
+  this.http.post("http://103.86.50.83:3001/addScore", payload,{headers}).subscribe(
     (val) => {
       // 
     },
@@ -93,7 +93,7 @@ addWIP(wipid:string,wipname:string,wiplogo:string,wip_score:string){
   .set('wip_icon',wiplogo)
   .set('wip_score',wip_score)
 
-  this.http.post("http://localhost:3001/addWIP", payload,{headers}).subscribe(
+  this.http.post("http://103.86.50.83:3001/addWIP", payload,{headers}).subscribe(
     (val) => {
       // 
     },
@@ -109,7 +109,7 @@ addWIP(wipid:string,wipname:string,wiplogo:string,wip_score:string){
 }
 
 private updateStats() {
-  this.http.get("http://localhost:3001/getListWIP").subscribe(val =>{
+  this.http.get("http://103.86.50.83:3001/getListWIP").subscribe(val =>{
     this.listWIP = val;
   })
 }

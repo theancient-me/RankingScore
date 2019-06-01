@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
     const payload = new HttpParams().set('username', username).set('password', password);
 
-    this.http.post("http://localhost:3001/wipLogin", payload).subscribe(
+    this.http.post("http://103.86.50.83:3001/wipLogin", payload).subscribe(
       (val) => {
 
       this.responseServer = val;

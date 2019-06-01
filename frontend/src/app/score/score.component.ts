@@ -18,12 +18,12 @@ export class ScoreComponent implements OnInit {
 
 
   ngOnInit() {
-    // this.updateSubscription = interval(3000).subscribe(
-    //   (val) => {
-    //     this.updateStats();
-    //   }
-    // );
-    this.updateStats();
+    this.updateSubscription = interval(1000).subscribe(
+      (val) => {
+        this.updateStats();
+      }
+    );
+    // this.updateStats();
 
 
   }
@@ -33,7 +33,7 @@ export class ScoreComponent implements OnInit {
   }
 
   private updateStats() {
-    this.http.get("http://localhost:3001/getListWIP").subscribe(val => {
+    this.http.get("http://103.86.50.83:3001/getListWIP").subscribe(val => {
       this.listWIP = val;
     })
 
