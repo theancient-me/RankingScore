@@ -4,12 +4,11 @@ var bodyParser = require("body-parser");
 var jwtToken = require("jsonwebtoken");
 var MongoClient = require("mongodb").MongoClient;
 var cors = require("cors");
-var CONFIG = require('./config/config.json');
 
 MongoClient.connect("mongodb://127.0.0.1:27017", (error, client) => {
   if (error) throw error;
   var db = client.db("WIPCAMP11");
-  var keyToken = CONFIG.appKEY;
+  var keyToken = "wipcamp11vichakaneiei";
 
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,8 +31,8 @@ MongoClient.connect("mongodb://127.0.0.1:27017", (error, client) => {
     db.collection("adminWIP").insertOne(
       {
         _adminId: "1",
-        username: CONFIG.username,
-        password: CONFIG.password
+        username: "bank",
+        password: "bank"
       },
       (err, result) => {
         if (err) return res.status(500).send(err.toString());
