@@ -1,6 +1,8 @@
 # Ranking Score leaderboard
 ranking score leaderboard realtime for using game activity. this project it has 2 systems include frontend is a show realtime score ranking and backend for manages point.
 
+![enter image description here](https://raw.githubusercontent.com/theancient-me/RankingScore/master/img/2.png)
+
 ##  Requirement
 
  - NodeJS 10 latest. [Doc](https://nodejs.org/en/docs/)
