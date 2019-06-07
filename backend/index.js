@@ -4,11 +4,12 @@ var bodyParser = require("body-parser");
 var jwtToken = require("jsonwebtoken");
 var MongoClient = require("mongodb").MongoClient;
 var cors = require("cors");
+var config = require('./config/config.json');
 
 MongoClient.connect("mongodb://127.0.0.1:27017", (error, client) => {
   if (error) throw error;
   var db = client.db("WIPCAMP11");
-  var keyToken = "wipcamp11vichakaneiei";
+  var keyToken = config.token;
 
   app.use(cors());
   app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,8 +32,8 @@ MongoClient.connect("mongodb://127.0.0.1:27017", (error, client) => {
     db.collection("adminWIP").insertOne(
       {
         _adminId: "1",
-        username: "bank",
-        password: "bank"
+        username: config.username,
+        password: config.password
       },
       (err, result) => {
         if (err) return res.status(500).send(err.toString());
@@ -182,8 +183,8 @@ MongoClient.connect("mongodb://127.0.0.1:27017", (error, client) => {
     });
   });
 
-  app.listen(3001, () => {
-    console.log("Backend started port : 3001");
+  app.listen(config.port, () => {
+    console.log("Backend started port : "+config.port);
   });
 });
 // mongoClient
