@@ -1,0 +1,19 @@
+{
+  "name": "rankingscore",
+  "version": "1.0.0",
+  "description": "Rangking score is a simple realtime leaderboard ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theancient-me/RankingScore.git"
+  },
+  "author": "llUJODev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theancient-me/RankingScore/issues"
+  },
+  "homepage": "https://github.com/theancient-me/RankingScore#readme"
+}
