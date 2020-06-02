@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/theancient-me/RankingScore/issues"
   },
-  "homepage": "https://github.com/theancient-me/RankingScore#readme"
+  "homepage": "https://github.com/theancient-me/RankingScore#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
