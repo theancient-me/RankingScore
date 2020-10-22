@@ -1,16 +1,15 @@
 # Ranking Score leaderboard
-   ranking score leaderboard realtime for using game activity. this project it has 2 systems include frontend is a show realtime score ranking and backend for manages point.
-
+   ระบบ Score board สำหรับการเล่นเกมหรือกิจกรรมต่าง ๆ โดยแข่งขันกันเป็นทีม เพื่อใช้ในการแข่งขันเล็กๆ สำหรับมาแลกของรางวัล หรือ เอาสนุกๆ | ranking score leaderboard realtime for using game activity.
 ![enter image description here](https://raw.githubusercontent.com/theancient-me/RankingScore/master/img/2.png)
 
-##  Requirement
+## ความต้องการ |Requirement
 
  - NodeJS 10 latest. [Doc](https://nodejs.org/en/docs/)
  - Angular7  [Doc]([https://angular.io/docs](https://angular.io/docs))
  - MongoDB.  [Doc](https://docs.mongodb.com/manual/reference/program/mongod/)
 
-## Getting Started
-clone ranking score leaderboard realtime 
+## วิธีการนำไปใช้ | Getting Started
+ทำการ Clone Repo นี้ไปหรือสามารถดาวน์โหลดได้จากหน้าเว็บนี้ clone ranking score leaderboard realtime 
 ```
 git clone https://github.com/theancient-me/RankingScore.git 
  ```
